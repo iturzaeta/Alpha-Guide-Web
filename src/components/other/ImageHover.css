@@ -1,0 +1,73 @@
+.parent {
+  width: 70%;
+  padding: 16px !important;
+  /* margin: 0px 2px 24px 2px; */
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+/* Several different images */
+.bg-one {background-image: url(../../assets/img/iceland.png);}
+.bg-two {background-image: url(../../assets/img/newzeland.png);}
+.bg-three {background-image: url(../../assets/img/austria.png);}
+.bg-four {background-image: url(../../assets/img/portugal.png);}
+.bg-five {background-image: url(../../assets/img/denmark.png);}
+.bg-six {background-image: url(../../assets/img/canada.png);}
+.bg-seven {background-image: url(../../assets/img/check.png);}
+.bg-eight {background-image: url(../../assets/img/singapur.png);}
+.bg-nine {background-image: url(../../assets/img/japan.png);}
+
+.child a {
+  display: none;
+  text-decoration:none;
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+
+.parent:hover .child, .parent:focus .child {
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+  display: block;
+}
+
+.parent:hover a, .parent:focus a {
+  display: block;
+}
+
+.child:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 24, 66, 0.25);
+}

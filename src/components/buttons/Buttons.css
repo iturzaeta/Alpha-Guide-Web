@@ -1,0 +1,28 @@
+.btn-type-main {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #1D3F9D -2.63%, #00ADD5 103.75%);
+  border-radius: 1px;
+  color: #FAFCFC;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  max-width: 312px;
+  border: 0px;
+  padding: 20px 80px;
+  margin: 24px;
+}
+
+.btn-type-secondary {
+  font-family: 'Montserrat', sans-serif;
+  background: #1D3F9D;
+  border-radius: 1px;
+  color: #FAFCFC;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 312px;
+  border: 0px;
+  padding: 16px 80px;
+}

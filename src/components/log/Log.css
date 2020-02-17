@@ -1,0 +1,17 @@
+.background-log {
+  background-image: url("../../assets/img/map.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-form {
+  background-color: white;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 96px;
+  padding: 48px 56px;
+}

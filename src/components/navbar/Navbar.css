@@ -1,0 +1,15 @@
+.icon-profile {
+  font-size: 24px;
+  color: #1D3F9D;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 72px;
+}
+
+.nav-transparent {
+  background-color: rgba(256, 256, 256, 0);
+}
