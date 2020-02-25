@@ -27,3 +27,19 @@
   border: 0px;
   padding: 16px 80px;
 }
+
+.btn-type-aux {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  border: 1px solid #1D3F9D;
+  border-radius: 1px;
+  color: #1D3F9D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  width: 60%;
+  padding: 12px 40px;
+  margin-top: 8px;
+}
