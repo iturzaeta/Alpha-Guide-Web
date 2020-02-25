@@ -1,22 +1,39 @@
-import React from 'react'
+import React, { Fragment, useEffect, useState, useRef } from 'react'
+import { Link, Redirect, useLocation } from 'react-router-dom'
+import {WithAuthConsumer} from '../../contexts/AuthContext'
 import logo from '../../logo.svg'
 import './Navbar.css'
 
 
-const Navbar = () => {
-  return (
-    <header>
-    <nav className="navbar nav-transparent">
-      <img src={logo} alt="logo-alpha-guide"></img>
+const Navbar = ({ currentUser }) => {
+  const { pathname } = useLocation()
+  const whiteBackground = (pathname === '/login' || pathname === '/register')
+  const [navHeight, setNavHeight] = useState(null)
 
-      {/* Este i debe ser un enlace que lleve a: 
-      - Registro/inicio de sesión
-      - Perfil en el caso de que ya esté iniciado */}
-      
-      <i className="icon-profile ri-user-4-line"></i>
+  const navRef = useRef(null)
+  useEffect(() => {
+    setNavHeight(navRef.current.getBoundingClientRect().height)
+  }, [])
+ 
+  return (
+    // <header style={{ marginBottom: `${navHeight}px`}}>
+    <header>
+    <nav ref={navRef} className={`navbar nav-transparent ${whiteBackground ? 'nav-white' : ''}`}>
+      <Link to="/"><img src={logo} alt="logo-alpha-guide"></img></Link>
+
+      {currentUser ? (
+        <Fragment>
+          <Link to="/profile"><i className="icon-profile ri-user-3-line"></i></Link>
+          {/* <button onClick={logout} className="logout-btn"><i class="logout-icon ri-shut-down-line"></i></button> */}
+        </Fragment>
+      ):(
+        <Fragment>
+          <Link to="/login"><i className="icon-profile ri-user-3-line"></i></Link>
+        </Fragment>
+      )}
     </nav>
   </header>
   )
 }
 
-export default Navbar
+export default WithAuthConsumer(Navbar)

@@ -14,7 +14,7 @@ const Home = ()  => {
       <div className="col-6 offset-3 welcome-info center-text"> 
         <h1 className="dark-blue">La nueva forma de preparar tu viaje</h1>
         <h6>Para que tu única preocupación sea ¡disfrutárlo!</h6>
-        <Button type='main' text="Nuevo viaje" />
+        <Button href="/profile "weight='main' text="Nuevo viaje" />
       </div>
       
       <div className="row d-flex justify-content-center">
@@ -33,13 +33,13 @@ const Home = ()  => {
         <ImageHover size='6' number='four' text="Portugal" />
         <ImageHover size='6' number='five' text="Denmark" />
         <ImageHover size='3' number='six' text="Canada" />
-        <ImageHover size='3' number='seven' text="Check" />
+        <ImageHover size='3' number='seven' text="Czechia" />
         <ImageHover size='3' number='eight' text="Singapour" />
         <ImageHover size='3' number='nine' text="Japan" />
       </div>
 
       <div className="center-text">
-        <Button type='main' text="Nuevo viaje" />
+        <Button href="/" weight='main' text="Nuevo viaje" />
       </div>
 
     </div>

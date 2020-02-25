@@ -1,10 +1,10 @@
 import React from 'react'
 import './Buttons.css'
 
-const Button = ({ type, text }) => {
+const Button = ({ href, onClick, weight, text }) => {
 
   return(
-    <a href="/" className={`btn-type-${type}`}>
+    <a href={href} onClick={onClick} className={`btn-type-${weight}`}>
       {text}
     </a>
   )

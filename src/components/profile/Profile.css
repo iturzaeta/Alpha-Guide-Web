@@ -1,0 +1,45 @@
+.cover-photo {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 400px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.cover-photo>img {
+  width: 100vw;
+}
+​
+.modal-bg {
+  margin-top: 18rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  background-color: #fff;
+  border-radius: 1px;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+​
+.cards {
+  margin-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+​
+.icon {
+  font-size: 24px;
+  color: #F5AD31;
+  margin-right: 8px;
+}
+​
+.my-card {
+  min-height: 308px;
+  border: 0px;
+  padding: 16px;
+}
+​
+.inside-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  padding-bottom: 24px;
+}

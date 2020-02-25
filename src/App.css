@@ -8,6 +8,11 @@ body {
   line-height: 32px;
 }
 
+.blur-bg {
+  filter: blur(4px);
+}
+
+
 .main-background { 
   background-image: url("./assets/img/Background.png");
   height: 100vh;

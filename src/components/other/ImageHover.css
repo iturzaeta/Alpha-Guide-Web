@@ -1,10 +1,13 @@
 .parent {
-  width: 70%;
+  width: 100%;
   padding: 16px !important;
   /* margin: 0px 2px 24px 2px; */
   height: 300px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.shadow-image {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
 }
 
