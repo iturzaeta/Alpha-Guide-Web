@@ -11,6 +11,7 @@ import Button from '../buttons/Button'
 import Modal from 'react-bootstrap/Modal'
 import EditForm from './EditForm'
 import Map from '../trip/Map'
+import NewTripModal from '../trip/NewTripModal'
 
 const EditModal = ({ setEditShowModal }) => {
 
@@ -28,7 +29,7 @@ const EditModal = ({ setEditShowModal }) => {
     );
 }
 
-const MapSelector = ({ setMapShowModal }) => {
+const TripModal = ({ setMapShowModal }) => {
 
     return (
         <React.Fragment >
@@ -37,7 +38,7 @@ const MapSelector = ({ setMapShowModal }) => {
                 <Modal.Title>Choose your destination</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Map setMapShowModal={setMapShowModal}/>
+                <NewTripModal setMapShowModal={setMapShowModal}/>
             </Modal.Body>
             </Modal>
         </React.Fragment>
@@ -106,7 +107,7 @@ const Profile = ({currentUser, logout}) => {
               <Button onClick={()  => setMapShowModal(true)} weight='main' text="Nuevo viaje" />
             </div>
               {showEditModal && <EditModal setEditShowModal={setEditShowModal} />}
-              {showMapModal && <MapSelector setMapShowModal={setMapShowModal} />}
+              {showMapModal && <TripModal setMapShowModal={setMapShowModal} />}
 
              
         ​
