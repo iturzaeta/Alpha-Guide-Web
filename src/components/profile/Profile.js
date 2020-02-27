@@ -56,13 +56,13 @@ const Profile = ({currentUser, logout}) => {
     }  
     
     return (
-        <div >
+        <div>
             <div className={showEditModal || showMapModal ? 'blur-bg d-block' : ''}>
               <div className="cover-photo">
                 <img src={currentUser.image} alt="" />
               </div>
         ​
-              <div className="row background-white">
+              <div className="row plaso modal-bg">
         ​
                 <div className="col-12 d-flex justify-content-end">
                   <button onClick={()  => setEditShowModal(true)} className="logout-btn"><i className="ri-edit-line icon"></i></button>

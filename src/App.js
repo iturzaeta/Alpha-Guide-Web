@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer'
 import Login from './components/log/Login';
 import Register from './components/log/Register';
 import Profile from './components/profile/Profile'
+import Trip from './components/trip/Tripinfo';
 
 function App() {
   const { pathname } = useLocation()
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={Home} /> 
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/trip" component={Trip} />
         <AuthenticatedRoute exact path="/profile" component={Profile} />
       </Switch>
       </div>

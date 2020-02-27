@@ -4,8 +4,8 @@ import './Profile.css'
 const CardTrip = (props) => {
   return (
     <div className="col-4 my-card">
-      <div className="v-100 h-100 overflow-hidden inside-card">
-        <img src={props.img} alt="" />
+      <div className="w-100 h-100 overflow-hidden inside-card">
+        <img src={props.img} alt="" className="w-100" />
         <div>
           <div className="d-flex pl-3 pr-3 justify-content-between">
             <h5 className="yellow pt-3">{props.destiny}</h5>
