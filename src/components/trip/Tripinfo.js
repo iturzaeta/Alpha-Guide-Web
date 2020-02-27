@@ -59,7 +59,7 @@ const Trip = () => {
               <h5 className="dark-blue">Enchufes</h5>
               <p>Verifica la caducidad de tu pasaporte</p>
               <p>Haz copias a toda tu documentación</p>
-              <Button weight='aux' text="Revisar documentación" />
+              <Button weight='aux' text="Documentación" />
             </div>
           </div>
 

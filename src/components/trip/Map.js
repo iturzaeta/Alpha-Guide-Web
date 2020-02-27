@@ -21,7 +21,7 @@ const MapChart = ({ setTooltipContent, setCountry, country }) => {
 
     return (
         <div>
-            <p>{country ? `Has seleccionado: ${country}` : 'Selecciona un pais haciendo click'}</p>
+            <h5 className="yellow">{country ? `Has seleccionado: ${country}` : 'Selecciona un pais haciendo click'}</h5>
             
             <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
                 <ZoomableGroup>

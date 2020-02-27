@@ -35,7 +35,7 @@ const TripModal = ({ setMapShowModal }) => {
         <React.Fragment >
             <Modal show={true} onHide={() => setMapShowModal(false)}>
             <Modal.Header closeButton>
-                <Modal.Title>Choose your destination</Modal.Title>
+                <Modal.Title>Plan your next adventure</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <NewTripModal setMapShowModal={setMapShowModal}/>
@@ -64,28 +64,27 @@ const Profile = ({currentUser, logout}) => {
         ​
               <div className="row plaso modal-bg">
         ​
-                <div className="col-12 d-flex justify-content-end">
+                <div className="col-12 d-flex justify-content-end action-buttons">
                   <button onClick={()  => setEditShowModal(true)} className="logout-btn"><i className="ri-edit-line icon"></i></button>
                   <button onClick={logout} className="logout-btn"><i className="ri-logout-circle-r-line icon"></i></button>
-                  {/* <i className="ri-logout-circle-r-line icon"></i> */}
                 </div>
         ​
-                <div className="col-6 d-flex pt-3 pb-2">
+                <div className="col-6 d-flex pt-3 addapt-visual">
                   <i className="ri-user-line icon "></i>
                   <p>{currentUser.name}</p>
                 </div>
         ​
-                <div className="col-6 d-flex pt-3 pb-2">
+                <div className="col-6 d-flex pt-3 addapt-visual">
                   <i className="ri-calendar-event-line icon"></i>
                   <p>32 días como viajera</p>
                 </div>
         ​
-                <div className="col-6 d-flex pb-3">
+                <div className="col-6 d-flex pb-4">
                   <i className="ri-map-pin-5-line icon"></i>
                   <p>{currentUser.country}</p>
                 </div>
         ​
-                <div className="col-6 d-flex pb-3">
+                <div className="col-6 d-flex pb-4">
                   <i className="ri-footprint-line icon"></i>
                   <p>14,543km en trajectos</p>
                 </div>
@@ -104,7 +103,10 @@ const Profile = ({currentUser, logout}) => {
                 <CardTrip img={ThirdTrip} destiny="Tanzania" days="15 days" dates="23 Diciembre 2017 - 02 Enero 2018" km="5.480  Km recorridos" />
               </div>
 
-              <Button onClick={()  => setMapShowModal(true)} weight='main' text="Nuevo viaje" />
+              <div className="d-flex align-items-center justify-content-center">
+               <Button onClick={()  => setMapShowModal(true)} weight='main' text="Nuevo viaje" />  
+              </div>
+
             </div>
               {showEditModal && <EditModal setEditShowModal={setEditShowModal} />}
               {showMapModal && <TripModal setMapShowModal={setMapShowModal} />}

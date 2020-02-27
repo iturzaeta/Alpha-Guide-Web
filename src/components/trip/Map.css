@@ -14,6 +14,26 @@
 
 .rsm-geography:focus { outline: 0; }
 
+.modal-dialog {
+  max-width: 700px !important;
+}
+
+.rdrMonthsVertical {
+  align-items: center;
+}
+
+.rdrStartEdge,.rdrInRange,.rdrEndEdge {
+  background-color: #F5AD31 !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  background-color: #F5AD31 !important;
+}
+
+.rdrDayStartPreview,.rdrDayEndPreview,.rdrDayInPreview {
+  color: #F5AD31 !important;
+}
+
 /* style={{
     default: {
       fill: "#D6D6DA",
