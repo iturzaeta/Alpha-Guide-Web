@@ -1,0 +1,34 @@
+.tag {
+  height: 32px;
+  border-radius: 1px;
+  color: #ffffff;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  margin: 8px;
+}
+
+.tag-blue {
+  background-color: #00ADD5;
+}
+
+.tag-yellow {
+  background-color: #F5AD31;
+}
+
+.card-trello {
+ min-height: 80px;
+ background-color: #F7FCFC;
+ box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+ border-radius: 1px;
+}
+
+.trello-board{
+  background-color: #ffffff;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+}

@@ -7,6 +7,7 @@ import HealthImage from '../../assets/img/Health.svg'
 import DocImage from '../../assets/img/Passport.svg'
 import Button from '../buttons/Button'
 import ProfileImage from '../../assets/img/Background.png'
+import Trello from '../trello/Trello'
 
 const Trip = () => {
   return (
@@ -56,13 +57,17 @@ const Trip = () => {
           <div className="col-lg-6 col-md-6 col-sm-12 my-card-travel">
             <div className="inside-card">
               <img src={DocImage} alt="" className="image-height" />
-              <h5 className="dark-blue">Enchufes</h5>
+              <h5 className="dark-blue">Documentación</h5>
               <p>Verifica la caducidad de tu pasaporte</p>
               <p>Haz copias a toda tu documentación</p>
               <Button weight='aux' text="Documentación" />
             </div>
           </div>
 
+          </div>
+
+          <div className="row">
+            <Trello></Trello>
           </div>
       </div>
     </div>
