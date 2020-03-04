@@ -17,8 +17,7 @@ const Calendar = ({setDate, date}) => {
 const createDates = (dates) => {
     setDate(dates)  
 }
-    // console.log('START ESTADO CALENDARIO =>', `${state[0].startDate}`)
-    // console.log('END ESTADO CALENDARIO =>', `${state[0].endDate}`) 
+
     return (
     
         <div>

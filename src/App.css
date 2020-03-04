@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .blur-bg {
@@ -49,4 +49,7 @@ a {
   justify-content: space-evenly;
 }
 
+.yellow {
+  color: #F5Ad31; 
+}
 

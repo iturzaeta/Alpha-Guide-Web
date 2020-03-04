@@ -2,7 +2,7 @@
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(90deg, #1D3F9D -2.63%, #00ADD5 103.75%);
   border-radius: 1px;
-  color: #FAFCFC;
+  color: #FAFCFC !important;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -17,7 +17,7 @@
   font-family: 'Montserrat', sans-serif;
   background: #1D3F9D;
   border-radius: 1px;
-  color: #FAFCFC;
+  color: #FAFCFC !important;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -33,13 +33,14 @@
   background: #fff;
   border: 1px solid #1D3F9D;
   border-radius: 1px;
-  color: #1D3F9D;
+  color: #1D3F9D !important;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   display: block;
   width: 60%;
+  max-width: 240px;
   padding: 12px 40px;
   margin-top: 8px;
 }

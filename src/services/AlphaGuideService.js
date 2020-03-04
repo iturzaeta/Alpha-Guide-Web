@@ -22,5 +22,7 @@ const login = ({ email, password }) => http.post('/login', { email, password })
 const logout = () => http.post('/logout')
 const profile = () => http.get('/profile')
 const edit = (user) => http.patch('/users/profile', user)
+const newTrip = (data, lat, lon) => http.post(`/trips/${lat}/${lon}`, data)
+const findTrip = (id) => http.get(`/trip/${id}`)
 
-export default {register, login, logout, profile, edit}
+export default {register, login, logout, profile, edit, newTrip, findTrip}

@@ -31,3 +31,22 @@
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
+
+.btn-tripinfo {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  border: 1px solid #1D3F9D;
+  border-radius: 1px;
+  color: #1D3F9D !important;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  width: 60%;
+  max-width: 240px;
+  padding: 12px 40px;
+  margin-top: 10px;
+}
+

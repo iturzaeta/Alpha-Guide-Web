@@ -9,19 +9,22 @@ import './Profile.css'
 
 
 class EditForm extends React.Component {
-  
-  state = {
-    data: {
-      username: this.props.currentUser.username,
-      name: this.props.currentUser.name,
-      image: this.props.currentUser.image,
-      country: this.props.currentUser.country
-    },
-    error: false,
-    loading: false,
-    success: false,
-    countries: []
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: {
+        username: this.props.currentUser.username,
+        name: this.props.currentUser.name,
+        image: this.props.currentUser.image,
+        country: this.props.currentUser.country
+      },
+      error: false,
+      loading: false,
+      success: false,
+      countries: []
+    }
   }
+  
 
   handleChange = (event) => {
     const {name, value, files} = event.target
@@ -49,7 +52,7 @@ class EditForm extends React.Component {
            
             this.props.setUser(user)
             this.setState({ success: true })
-            this.props.setShowModal(false)
+            this.props.setEditShowModal(false)
         })
         .catch(() => {
           this.setState({ error: true, loading: false})

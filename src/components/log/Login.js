@@ -35,12 +35,10 @@ class Login extends React.Component {
       AlphaGuideService.login({ ...this.state.data })
         .then(
           (user) => {
-            console.log(user)
 
             this.props.setUser(user)
           },
           () => {
-            console.log('NO HAY USER')
 
             this.setState({ error: true, loading: false })
           }

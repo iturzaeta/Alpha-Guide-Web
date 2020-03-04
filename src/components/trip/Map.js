@@ -21,7 +21,7 @@ const MapChart = ({ setTooltipContent, setCountry, country }) => {
 
     return (
         <div>
-            <p>{country ? `Has seleccionado: ${country}` : 'Selecciona un pais haciendo click'}</p>
+            <h5 className="yellow">{country ? `Has seleccionado: ${country}` : 'Selecciona un pais haciendo click'}</h5>
             
             <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
                 <ZoomableGroup>
@@ -41,7 +41,7 @@ const MapChart = ({ setTooltipContent, setCountry, country }) => {
                                 }
                                 resetCountries()
                                 const { NAME } = geo.properties;
-                                // console.log(geo)
+                                
                                 setCountry(NAME);
                                 e.target.style.fill = '#F5AD31'
                                 e.target.style.events = "none"
