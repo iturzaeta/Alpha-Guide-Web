@@ -27,7 +27,7 @@ const Home = ()  => {
       </div>
 
       <div className="row col-10 offset-1 d-flex justify-content-around cards-safe">
-        <ImageHover size='4' number='one' text="Iceland" />
+        <ImageHover onClick="" size='4' number='one' text="Iceland" />
         <ImageHover size='4' number='two' text="New Zeland" />
         <ImageHover size='4' number='three' text="Austria" />
         <ImageHover size='6' number='four' text="Portugal" />

@@ -9,6 +9,7 @@ import Button from '../buttons/Button'
 import ProfileImage from '../../assets/img/Background.png'
 import { useParams } from 'react-router-dom'
 import AlphaGuideService from '../../services/AlphaGuideService'
+import Trello from '../trello/Trello'
 
 
 const parseDate = date => {
@@ -89,9 +90,9 @@ const Trip = () => {
 
           </div>
 
-          {/* <div className="row">
+          <div className="row">
             <Trello></Trello>
-          </div> */}
+          </div>
 
       </div>
     </div>

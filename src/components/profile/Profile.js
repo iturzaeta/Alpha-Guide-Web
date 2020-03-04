@@ -139,7 +139,7 @@ const Profile = ({currentUser, logout}) => {
             </h4>
           </div>
 
-          <div className="row cards">
+          <div className="row cards d-flex">
 
               {currentUser.trips ? currentUser.trips.map((trip, key) => {
 
