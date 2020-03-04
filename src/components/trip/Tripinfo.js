@@ -88,6 +88,11 @@ const Trip = () => {
           </div>
 
           </div>
+
+          {/* <div className="row">
+            <Trello></Trello>
+          </div> */}
+
       </div>
     </div>
   ) :
