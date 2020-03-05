@@ -59,6 +59,7 @@ button:active{
 .my-card {
   min-height: 308px;
   border: 0px;
+  margin-top: 40px;
 }
 
 .inside-mytrip {
@@ -88,4 +89,57 @@ button:active{
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
+}
+
+.btn-div {
+  margin-top: 50px
+}
+
+input{
+  outline: none !important;
+}
+
+input:hover{
+  outline: none !important;
+}
+
+input:focus{
+  outline: none !important;
+}
+
+input:active{
+  outline: none !important;
+}
+
+select{
+  outline: none !important;
+}
+
+select:hover{
+  outline: none !important;
+}
+
+select:focus{
+  outline: none !important;
+}
+
+select:active{
+  outline: none !important;
+}
+
+.edit-input {
+  width: 100% !important
+}
+
+.modal-main {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-form {
+  width: 80%;
+}
+
+.edit-btn {
+  margin-left: 4em !important;
 }

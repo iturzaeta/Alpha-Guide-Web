@@ -81,7 +81,7 @@ class EditForm extends React.Component {
     return (
 
       <div className="modal-main">
-          <form onSubmit={this.handleSubmit}>
+          <form className="edit-form" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="name" className="d-flex flex-column dark-blue">Name</label>
               <input
@@ -90,7 +90,7 @@ class EditForm extends React.Component {
                 autoComplete="off"
                 name="name"
                 type="text"
-                className={` form-group ${errorClassName}`}
+                className={`edit-input form-group ${errorClassName}`}
                 id="name"
                 placeholder="Enter your fullname"
               />
@@ -104,7 +104,7 @@ class EditForm extends React.Component {
                 autoComplete="off"
                 name="username"
                 type="text"
-                className={` form-group ${errorClassName}`}
+                className={`edit-input form-group ${errorClassName}`}
                 id="username"
                 placeholder="Choose an username"
               />
@@ -117,6 +117,7 @@ class EditForm extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.data.country}
                 id="country"
+                className="edit-input"
               >
                 <option disabled>Select your country</option>
                 {this.state.countries.map((c, i) => (
@@ -131,13 +132,13 @@ class EditForm extends React.Component {
                 onChange={this.handleChange}
                 name="image"
                 type="file"
-                className={`form-control-file ${errorClassName}`}
+                className={`edit-input form-control-file ${errorClassName}`}
                 id="image"
               />
             </div>
             <button
               type="submit"
-              className="btn btn-block btn-primary mt-5 register"
+              className="btn btn-block btn-primary mt-5 edit-btn register"
               disabled={this.state.loading}
             >
               Save Changes

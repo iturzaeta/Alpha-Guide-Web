@@ -4,13 +4,9 @@ import {WithAuthConsumer} from '../../contexts/AuthContext'
 import {Redirect} from 'react-router-dom'
 import './Profile.css'
 import CardTrip from '../profile/CardTrip'
-import FirstTrip from '../../assets/img/iceland.png'
-import SecondTrip from '../../assets/img/canada.png'
-import ThirdTrip from '../../assets/img/austria.png'
 import Button from '../buttons/Button'
 import Modal from 'react-bootstrap/Modal'
 import EditForm from './EditForm'
-import Map from '../trip/Map'
 import NewTripModal from '../trip/NewTripModal'
 
 const EditModal = ({ setEditShowModal }) => {
@@ -29,7 +25,7 @@ const EditModal = ({ setEditShowModal }) => {
   );
 }
 
-const TripModal = ({ setMapShowModal }) => {
+export const TripModal = ({ setMapShowModal }) => {
 
   return (
       <React.Fragment >
@@ -184,7 +180,7 @@ const Profile = ({currentUser, logout, setUser}) => {
 
           </div>
 
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex align-items-center justify-content-center btn-div">
             <Button onClick={()  => setMapShowModal(true)} weight='main' text="New Trip" />
           </div>
           

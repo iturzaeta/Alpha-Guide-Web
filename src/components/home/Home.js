@@ -1,30 +1,32 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import CardInfo from '../cards/CardInfo';
 import Button from '../buttons/Button';
 import firstCardImg from '../../assets/img/Passport.svg'
 import secondCardImg from '../../assets/img/Medicine.svg'
 import ImageHover from '../other/ImageHover'
+import { TripModal } from '../profile/Profile';
+import { Redirect } from 'react-router-dom';
+import AuthContext from '../../contexts/AuthContext';
 
 const Home = ()  => {
+  const { currentUser } = useContext(AuthContext)
+  const [showMapModal, setMapShowModal] = useState(false)
+  const [redirectLogin, setRedirectLogin] = useState(false)
+  console.log(currentUser)
 
-
-
-
-
-
-
-
-
+  if (redirectLogin) return <Redirect to='/login'/>
 
   return (
+   
     <div>
-
+      {}
+        { showMapModal && <TripModal setMapShowModal={setMapShowModal}/>}
       <div className="main-background"> </div> 
 
       <div className="col-6 offset-3 welcome-info center-text"> 
         <h1 className="dark-blue">The new way to prepare your trip</h1>
         <h6>So that your only concern is to enjoy it!</h6>
-        <Button href="/profile "weight='main' text="New Trip" />
+        <Button onClick={() => currentUser ? setMapShowModal(true) : setRedirectLogin(true)} weight='main' text="New Trip" />
       </div>
       
       <div className="row d-flex justify-content-center">
@@ -49,7 +51,7 @@ const Home = ()  => {
       </div>
 
       <div className="center-text">
-        <Button href="/" weight='main' text="New Trip" />
+        <Button onClick={() => currentUser ? setMapShowModal(true) : setRedirectLogin(true)} weight='main' text="New Trip" />
       </div>
 
     </div>
