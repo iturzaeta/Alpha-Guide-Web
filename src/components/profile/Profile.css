@@ -70,3 +70,22 @@ button:active{
 .logout-btn {
   z-index: 10;
 }
+
+.close-tag {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 24px;
+  color: #fff;
+  z-index: 10
+}
+.close-tag:hover {
+  color: #9B3200;
+}
+
+.destiny-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}

@@ -44,3 +44,8 @@
   padding: 12px 40px;
   margin-top: 8px;
 }
+
+.btn-type-aux:hover {
+  color: #fff !important;
+  background-color: #1D3F9D;
+}

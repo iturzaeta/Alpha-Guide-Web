@@ -6,24 +6,34 @@ import secondCardImg from '../../assets/img/Medicine.svg'
 import ImageHover from '../other/ImageHover'
 
 const Home = ()  => {
+
+
+
+
+
+
+
+
+
+
   return (
     <div>
 
       <div className="main-background"> </div> 
 
       <div className="col-6 offset-3 welcome-info center-text"> 
-        <h1 className="dark-blue">La nueva forma de preparar tu viaje</h1>
-        <h6>Para que tu única preocupación sea ¡disfrutárlo!</h6>
-        <Button href="/profile "weight='main' text="Nuevo viaje" />
+        <h1 className="dark-blue">The new way to prepare your trip</h1>
+        <h6>So that your only concern is to enjoy it!</h6>
+        <Button href="/profile "weight='main' text="New Trip" />
       </div>
       
       <div className="row d-flex justify-content-center">
-        <CardInfo img={firstCardImg} title="Viaja sin sorpresas" description="Toda la información de documentación, visados y formas de conseguirlos." />
-        <CardInfo img={secondCardImg} title="Y vuelve sano" description="¡Disfruta como te mereces! Consulta la medicación y vacunas para tu viaje." />
+        <CardInfo img={firstCardImg} title="Travel without surprises" description="All documentation information, visas and ways to get them." />
+        <CardInfo img={secondCardImg} title="Come back safe and sound" description="Enjoy as you deserve! Check the medication and vaccines for your trip." />
       </div>
 
       <div className="col-6 offset-3 center-text"> 
-        <h4 className="dark-blue">Los destinos más seguros</h4>
+        <h4 className="dark-blue">Safest countries choosen for you</h4>
       </div>
 
       <div className="row col-10 offset-1 d-flex justify-content-around cards-safe">
@@ -39,7 +49,7 @@ const Home = ()  => {
       </div>
 
       <div className="center-text">
-        <Button href="/" weight='main' text="Nuevo viaje" />
+        <Button href="/" weight='main' text="New Trip" />
       </div>
 
     </div>

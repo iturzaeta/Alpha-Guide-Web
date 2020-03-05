@@ -54,11 +54,28 @@ const parseDate = date => {
   return `${day}/ ${month}/ ${year}`
 }
 
-const Profile = ({currentUser, logout}) => {
+
+const Profile = ({currentUser, logout, setUser}) => {
   const [showEditModal, setEditShowModal] = useState(false)
   const [showMapModal, setMapShowModal] = useState(false)
   const [tripDays, setTripDays] = useState(0)
   const [kmTrips, setKmTrips] = useState(0)
+
+  const handleDelete = (id) => {
+    console.log("CURRENT USER =>", currentUser)
+
+    AlphaGuideService.deleteTrip(id) 
+      .then(deletedTrip => {
+        console.log(deletedTrip)
+        const newTrips = currentUser.trips.filter(trip => trip.id !== deletedTrip.id)
+        // const updatedUser = {...currentUser, trips: currentUser.trips.filter(trip => trip !== deletedTrip)} 
+        const updatedUser = {...currentUser, trips: newTrips} 
+
+        setUser(updatedUser)
+        console.log("UPDATED USER =>",updatedUser)
+      })
+    
+  }
 
 
   useEffect(() => {
@@ -118,7 +135,7 @@ const Profile = ({currentUser, logout}) => {
     ​
             <div className="col-6 d-flex pt-3 addapt-visual">
               <i className="ri-calendar-event-line icon"></i>
-              <p>{tripDays} días viajados</p>
+              <p>{tripDays} days traveled</p>
             </div>
     ​
             <div className="col-6 d-flex pb-4">
@@ -128,14 +145,14 @@ const Profile = ({currentUser, logout}) => {
     ​
             <div className="col-6 d-flex pb-4">
               <i className="ri-footprint-line icon"></i>
-              <p>{kmTrips} km en trayectos</p>
+              <p>{kmTrips} km in journeys</p>
             </div>
     ​
           </div>
     ​
           <div className="container">
             <h4>
-              Mis viajes
+              My trips
             </h4>
           </div>
 
@@ -145,8 +162,17 @@ const Profile = ({currentUser, logout}) => {
 
               if(trip.country !== null) {
 
-                return <CardTrip id={trip.id} key={key} img={trip.country.image_cover} destiny={trip.country.name} days={Math.floor(trip.tripDays)} dates={`${parseDate(trip.start_date)} - ${parseDate(trip.end_date)}`} km={Math.floor(trip.tripKm)}/>
-              }
+                return <CardTrip 
+                  id={trip.id} 
+                  key={key} 
+                  img={trip.country.image_cover} 
+                  destiny={trip.country.name} 
+                  days={Math.floor(trip.tripDays)} 
+                  dates={`${parseDate(trip.start_date)} - ${parseDate(trip.end_date)}`} 
+                  km={Math.floor(trip.tripKm)}
+                  onClick={handleDelete}
+                />
+                }
 
               }) : <p>Configura tu primer viaje</p>}
               ​

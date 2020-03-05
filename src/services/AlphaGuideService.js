@@ -24,5 +24,6 @@ const profile = () => http.get('/profile')
 const edit = (user) => http.patch('/users/profile', user)
 const newTrip = (data, lat, lon) => http.post(`/trips/${lat}/${lon}`, data)
 const findTrip = (id) => http.get(`/trip/${id}`)
+const deleteTrip = (id) => http.post(`/trip/${id}/delete`)
 
-export default {register, login, logout, profile, edit, newTrip, findTrip}
+export default {register, login, logout, profile, edit, newTrip, findTrip, deleteTrip}

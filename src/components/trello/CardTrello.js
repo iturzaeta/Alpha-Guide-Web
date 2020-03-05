@@ -5,7 +5,7 @@ import TagTrello from './TagTrello'
 const CardTrello = ({text}) => {
   return (
       <div className="col-3 card-trello">
-        <TagTrello color='blue' text='Maleta'/>
+        <TagTrello color='blue' text='Bag'/>
         <p>{text}</p>
       </div>
   )

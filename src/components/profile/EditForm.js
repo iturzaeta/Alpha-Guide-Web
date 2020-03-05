@@ -7,7 +7,6 @@ import Button from '../buttons/Button'
 import countries from '../../data/countries.json'
 import './Profile.css'
 
-
 class EditForm extends React.Component {
   constructor(props) {
     super(props)
@@ -24,11 +23,11 @@ class EditForm extends React.Component {
       countries: []
     }
   }
-  
+
 
   handleChange = (event) => {
-    const {name, value, files} = event.target
 
+    const {name, value, files} = event.target
     this.setState({
       data: {
         ...this.state.data,
@@ -38,10 +37,12 @@ class EditForm extends React.Component {
   }
 
   handleSubmit = (event) => {
+
     event.preventDefault()
 
     this.setState({ loading: true, error: false}, () => {
-    const formData = new FormData()
+    
+      const formData = new FormData()
         formData.append('username', this.state.data.username )
         formData.append('name', this.state.data.name)
         formData.append('image', this.state.data.image)
@@ -49,7 +50,6 @@ class EditForm extends React.Component {
 
       AlphaGuideService.edit(formData)
         .then((user) => {
-           
             this.props.setUser(user)
             this.setState({ success: true })
             this.props.setEditShowModal(false)
@@ -70,25 +70,20 @@ class EditForm extends React.Component {
   )}
 
   render() {
-    const errorClassName = this.state.error ? 'is-invalid' : ''
 
+    const errorClassName = this.state.error ? 'is-invalid' : ''
     if(this.state.success) {
       return <Redirect to='/profile' />
     } 
-
     if (!this.props.currentUser) {
       return <Redirect to="/"/>
     }
-
     return (
 
       <div className="modal-main">
           <form onSubmit={this.handleSubmit}>
-
             <div className="form-group">
-
-              <label htmlFor="name">Name</label>
-
+              <label htmlFor="name" className="d-flex flex-column dark-blue">Name</label>
               <input
                 value={this.state.data.name}
                 onChange={this.handleChange}
@@ -99,14 +94,10 @@ class EditForm extends React.Component {
                 id="name"
                 placeholder="Enter your fullname"
               />
-              
             </div>
-
-
             <div className="form-group">
-
-              <label htmlFor="username">Username</label>
-
+              <label htmlFor="username"
+              className="d-flex flex-column dark-blue">Username</label>
               <input
                 value={this.state.data.username}
                 onChange={this.handleChange}
@@ -117,13 +108,10 @@ class EditForm extends React.Component {
                 id="username"
                 placeholder="Choose an username"
               />
-
             </div>
-
             <div className="form-group">
-
-              <label htmlFor="country">Country</label>
-              
+              <label htmlFor="country"
+              className="d-flex flex-column dark-blue">Country</label>
               <select
                 name="country"
                 onChange={this.handleChange}
@@ -134,14 +122,11 @@ class EditForm extends React.Component {
                 {this.state.countries.map((c, i) => (
                   <option value={c.name} key={i}>{c.name}</option>
                 ))}
-
               </select>
             </div>
-
             <div className="form-group">
-
-              <label htmlFor="image">Image</label>
-
+              <label htmlFor="image"
+              className="d-flex flex-column dark-blue">Image</label>
               <input
                 onChange={this.handleChange}
                 name="image"
@@ -149,23 +134,18 @@ class EditForm extends React.Component {
                 className={`form-control-file ${errorClassName}`}
                 id="image"
               />
-
             </div>
-
             <button
               type="submit"
-              className="btn btn-block btn-primary mt-5"
+              className="btn btn-block btn-primary mt-5 register"
               disabled={this.state.loading}
             >
               Save Changes
             </button>
-
           </form>
         </div>
     )
   }
-
-
 }
 
 export default WithAuthConsumer(EditForm)

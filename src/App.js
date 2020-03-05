@@ -26,6 +26,7 @@ function App() {
         <Route exact path="/" component={Home} /> 
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/users/:token/validate" component={Login} />
         <AuthenticatedRoute exact path="/profile" component={Profile} />
         <AuthenticatedRoute exact path="/trip/:id" component={Trip} />
       </Switch>
